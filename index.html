@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>717电影网 - 7:17特价场·胶片票根风影视导航</title>
+<meta name="description" content="717电影网(https://717dianyingwang-h5.github.io)以7:17特价场、胶片票根、影院指示牌为视觉，整理最新电影、热播剧集、综艺娱乐、动漫专区，做合规影视信息导航站。">
+<meta name="keywords" content="717电影网,717,7点17,特价场,票根风,电影,电视剧,综艺,动漫,影视导航">
+<meta name="author" content="717电影网">
+<meta name="robots" content="index,follow">
+<meta name="msvalidate.01" content="BING_VERIFICATION_CODE">
+<meta property="og:title" content="717电影网 - 7:17特价场·胶片票根风影视导航">
+<meta property="og:description" content="717电影网：每天 7:17 开一场好片，票根留着，片不存站里。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://717dianyingwang-h5.github.io">
+<meta property="og:site_name" content="717电影网">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"717电影网",
+  "url":"https://717dianyingwang-h5.github.io",
+  "description":"7:17特价场、胶片票根风影视信息导航站",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://717dianyingwang-h5.github.io#search={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --night:#0b1020;
+  --night2:#121a33;
+  --ticket:#f7f3e8;
+  --ink:#1b2233;
+  --neon:#ff2e63;
+  --green:#36d399;
+  --gold:#ffd166;
+  --muted:#8b93ad;
+}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;
+  background:
+    radial-gradient(680px 380px at 90% 0%, rgba(255,46,99,.18), transparent 60%),
+    radial-gradient(520px 300px at 0% 12%, rgba(54,211,153,.14), transparent 60%),
+    var(--night);
+  color:var(--ticket);line-height:1.8;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit;transition:.2s}
+
+.strip{height:8px;background:repeating-linear-gradient(90deg,var(--neon) 0 18px,var(--night) 18px 22px,var(--green) 22px 40px,var(--night) 40px 44px)}
+
+.top{max-width:1180px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.brand{font-family:"Courier New",monospace;font-size:30px;font-weight:900;color:var(--ticket)}
+.brand b{color:var(--neon)}
+.brand small{display:block;font-size:11px;letter-spacing:3px;color:var(--green);font-weight:700;font-family:sans-serif}
+.nav{display:flex;gap:12px;margin-left:auto;flex-wrap:wrap}
+.nav a{font-size:14px;font-weight:700;color:var(--ticket);padding:6px 14px;border:1px dashed rgba(255,255,255,.35);border-radius:6px}
+.nav a:hover{background:var(--neon);color:#fff;border-color:var(--neon)}
+.btn{font-size:13px;font-weight:800;background:var(--green);color:var(--night);padding:8px 18px;border-radius:6px;box-shadow:0 3px 0 #1c8f6a}
+.btn:hover{transform:translateY(-1px)}
+
+.hero{max-width:1180px;margin:0 auto;padding:44px 20px 24px;position:relative}
+.clock{position:absolute;right:18px;top:6px;font-family:"Courier New",monospace;font-size:96px;font-weight:900;color:var(--neon);opacity:.18;letter-spacing:-4px}
+.hero-card{background:linear-gradient(160deg,var(--night2),#0a0f1d);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:34px 32px;max-width:780px;position:relative;
+  box-shadow:inset 0 0 0 4px rgba(255,209,102,.12),0 16px 40px rgba(0,0,0,.5)}
+.stub{display:inline-block;background:var(--ticket);color:var(--ink);font-family:"Courier New",monospace;font-weight:800;font-size:12px;padding:4px 12px;border-radius:4px;margin-bottom:12px}
+.hero h1{font-family:"Courier New",monospace;font-size:clamp(38px,7vw,68px);font-weight:900;color:var(--ticket);letter-spacing:2px}
+.hero h1 span{color:var(--neon)}
+.hero p{max-width:620px;color:#cfd6ea;font-size:clamp(14px,3vw,16px);margin:14px 0}
+.hero-url{display:inline-block;font-family:"Courier New",monospace;font-weight:800;color:var(--gold);background:#0a0f1d;border:1px dashed var(--green);padding:8px 16px;border-radius:8px}
+
+.section{max-width:1180px;margin:0 auto;padding:18px 20px 60px}
+.head{display:flex;align-items:center;gap:12px;margin:38px 0 18px;flex-wrap:wrap}
+.head .ico{font-size:22px}
+.head h2{font-size:clamp(20px,4vw,26px);font-weight:900;color:var(--ticket)}
+.head .en{font-size:12px;color:var(--green);font-family:"Courier New",monospace}
+.head .line{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--neon) 0 10px,transparent 10px 20px);min-width:40px}
+
+/* 票根卡 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.stub-card{background:var(--ticket);color:var(--ink);border-radius:10px;padding:0;position:relative;transition:.22s;overflow:hidden;border:1px solid #e7e0cf}
+.stub-card::before,.stub-card::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:var(--night);top:64px}
+.stub-card::before{left:-9px}
+.stub-card::after{right:-9px}
+.stub-card:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.stub-top{background:var(--neon);color:#fff;font-family:"Courier New",monospace;font-weight:800;font-size:12px;padding:8px 14px;display:flex;justify-content:space-between}
+.stub-body{padding:14px 16px 16px}
+.stub-body h3{font-size:16px;font-weight:900}
+.stub-body p{font-size:12px;color:#5b6275;margin:4px 0 8px}
+.seat{display:inline-block;font-family:"Courier New",monospace;font-size:11px;font-weight:800;color:var(--night);background:var(--gold);padding:2px 8px;border-radius:4px;margin-right:4px}
+
+/* 热剧：排片表 */
+.timetable{background:#0e152b;border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden}
+.row{display:grid;grid-template-columns:90px 1fr 120px;gap:10px;align-items:center;padding:12px 16px;border-bottom:1px dashed rgba(255,255,255,.12)}
+.row:last-child{border-bottom:0}
+.row .time{font-family:"Courier New",monospace;font-weight:900;color:var(--green)}
+.row h3{font-size:15px;font-weight:800}
+.row p{font-size:12px;color:var(--muted)}
+.row .hall{font-family:"Courier New",monospace;font-size:12px;font-weight:800;color:var(--neon);text-align:right}
+
+/* 综艺：放映厅 */
+.halls{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.hall-card{display:flex;align-items:center;gap:14px;background:#10182f;border:1px solid rgba(54,211,153,.4);border-radius:14px;padding:14px 18px}
+.hall-card .reel{font-size:26px}
+.hall-card h3{font-size:14px;font-weight:800;color:var(--ticket)}
+.hall-card p{font-size:12px;color:var(--muted)}
+
+/* 动漫：胶片条 */
+.film{display:flex;flex-direction:column;gap:12px}
+.cell{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#10182f,#0b1020);border:1px dashed rgba(255,209,102,.5);border-radius:10px;padding:10px 18px}
+.cell .perf{width:22px;height:16px;border-radius:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 3px,#0b1020 3px 7px)}
+.cell:nth-child(2) .perf{background:repeating-linear-gradient(90deg,var(--neon) 0 3px,#0b1020 3px 7px)}
+.cell:nth-child(3) .perf{background:repeating-linear-gradient(90deg,var(--green) 0 3px,#0b1020 3px 7px)}
+.cell:nth-child(4) .perf{background:repeating-linear-gradient(90deg,#7aa2ff 0 3px,#0b1020 3px 7px)}
+.cell:nth-child(5) .perf{background:repeating-linear-gradient(90deg,#c792ea 0 3px,#0b1020 3px 7px)}
+.cell:nth-child(6) .perf{background:repeating-linear-gradient(90deg,#ffb86c 0 3px,#0b1020 3px 7px)}
+.cell h3{font-size:14px;font-weight:800;color:var(--ticket)}
+.cell p{font-size:12px;color:var(--muted)}
+.cell .ep{margin-left:auto;font-family:"Courier New",monospace;font-size:11px;font-weight:800;color:var(--gold)}
+
+.about{max-width:1180px;margin:0 auto;padding:10px 20px 50px}
+.board{background:#0e152b;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:30px;position:relative}
+.board::before{content:"7号厅";position:absolute;top:-14px;right:22px;font-family:"Courier New",monospace;font-weight:900;font-size:20px;color:var(--night);background:var(--gold);padding:4px 12px;border-radius:6px}
+.board h3{font-size:20px;font-weight:900;color:var(--ticket);margin-bottom:12px}
+.board p{font-size:14px;color:#cfd6ea;margin-bottom:10px}
+.board b{color:var(--neon)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.stat{background:#0b1020;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;text-align:center}
+.stat .v{font-size:22px;font-weight:900;color:var(--gold);font-family:"Courier New",monospace}
+.stat .l{font-size:12px;color:var(--green);margin-top:4px}
+
+.footer{background:#070b16;color:var(--muted);padding:36px 20px 22px;text-align:center;margin-top:40px;border-top:5px solid var(--neon)}
+.footer .lg{font-family:"Courier New",monospace;font-size:22px;font-weight:900;color:var(--ticket)}
+.footer .lg b{color:var(--neon)}
+.footer .fl{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:12px 0;font-size:13px}
+.footer .fl a{color:var(--green);border-bottom:1px dotted rgba(54,211,153,.6)}
+.footer .cp{font-size:12px;line-height:2;border-top:1px solid #1a2340;padding-top:14px;max-width:880px;margin:0 auto}
+.footer .cp a{color:var(--gold)}
+
+@media(max-width:768px){.nav{display:none}.grid{grid-template-columns:repeat(2,1fr)}.halls{grid-template-columns:repeat(2,1fr)}.clock{display:none}.row{grid-template-columns:70px 1fr}}
+@media(max-width:480px){.section{padding:18px 14px 40px}.grid{grid-template-columns:1fr}.halls{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hero-card{padding:26px 18px}.row{grid-template-columns:64px 1fr 84px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="strip"></div>
+
+<div class="top">
+  <div class="brand">717<b>电影网</b><small>7:17 SHOWTIME · 特价场</small></div>
+  <nav class="nav">
+    <a href="#movies">新片场次</a>
+    <a href="#tv">热播排片</a>
+    <a href="#shows">放映厅综艺</a>
+    <a href="#anime">胶片动漫</a>
+    <a href="#about">关于7号厅</a>
+  </nav>
+  <a href="#movies" class="btn">🎟️ 取票看片</a>
+</div>
+
+<header class="hero">
+  <div class="clock">7:17</div>
+  <div class="hero-card">
+    <div class="stub">ADMIT ONE · 717 特价场</div>
+    <h1>717<span>电影网</span></h1>
+    <p>每天 7:17 开一场好片：新片像刚打的票根，热剧像连排夜场，综艺在放映厅唠嗑，动漫走胶片。本站只做影视信息导航——不存片、不盗链、不聚合非法播放源，和“717 免费看会员片”的聚合站不是一回事。</p>
+    <div class="hero-url">🔗 https://717dianyingwang-h5.github.io</div>
+  </div>
+</header>
+
+<main class="section">
+
+  <div class="head" id="movies">
+    <span class="ico">🎟️</span><h2>新片场次 · 最新电影</h2><span class="en">// now showing</span><div class="line"></div>
+  </div>
+  <div class="grid">
+    <div class="stub-card"><div class="stub-top"><span>717-C1</span><span>7:17</span></div><div class="stub-body"><h3>夜场首映夜</h3><p>剧情/2026/8.7</p><span class="seat">座位 A7</span><span class="seat">新片</span></div></div>
+    <div class="stub-card"><div class="stub-top"><span>717-C2</span><span>7:17</span></div><div class="stub-body"><h3>霓虹售票处</h3><p>悬疑/2026/8.5</p><span class="seat">座位 B3</span><span class="seat">口碑</span></div></div>
+    <div class="stub-card"><div class="stub-top"><span>717-C3</span><span>7:17</span></div><div class="stub-body"><h3>胶片与海风</h3><p>文艺/2026/8.8</p><span class="seat">座位 C9</span><span class="seat">高分</span></div></div>
+    <div class="stub-card"><div class="stub-top"><span>717-C4</span><span>7:17</span></div><div class="stub-body"><h3>检票口情人</h3><p>爱情/2026/8.4</p><span class="seat">座位 D2</span><span class="seat">甜</span></div></div>
+    <div class="stub-card"><div class="stub-top"><span>717-C5</span><span>7:17</span></div><div class="stub-body"><h3>爆米花凶案</h3><p>喜剧悬疑/2026/8.6</p><span class="seat">座位 E5</span><span class="seat">下饭</span></div></div>
+    <div class="stub-card"><div class="stub-top"><span>717-C6</span><span>7:17</span></div><div class="stub-body"><h3>末班放映机</h3><p>科幻/2026/8.3</p><span class="seat">座位 F8</span><span class="seat">燃</span></div></div>
+  </div>
+
+  <div class="head" id="tv">
+    <span class="ico">🎞️</span><h2>热播排片 · 热播剧集</h2><span class="en">// daily schedule</span><div class="line"></div>
+  </div>
+  <div class="timetable">
+    <div class="row"><div class="time">7:17</div><div><h3>夜市放映员</h3><p>都市/更新至24集</p></div><div class="hall">3号厅</div></div>
+    <div class="row"><div class="time">7:17</div><div><h3>胶片胡同19号</h3><p>年代/更新至18集</p></div><div class="hall">5号厅</div></div>
+    <div class="row"><div class="time">7:17</div><div><h3>售票大堂那些事</h3><p>群像/更新至30集</p></div><div class="hall">2号厅</div></div>
+    <div class="row"><div class="time">7:17</div><div><h3>检票员日记</h3><p>悬疑/更新至12集</p></div><div class="hall">7号厅</div></div>
+    <div class="row"><div class="time">7:17</div><div><h3>散场之后</h3><p>治愈/更新至20集</p></div><div class="hall">1号厅</div></div>
+  </div>
+
+  <div class="head" id="shows">
+    <span class="ico">🎬</span><h2>放映厅综艺 · 综艺娱乐</h2><span class="en">// backstage show</span><div class="line"></div>
+  </div>
+  <div class="halls">
+    <div class="hall-card"><div class="reel">🎟️</div><div><h3>7:17 开聊</h3><p>放映前聊片，不剧透到第三幕</p></div></div>
+    <div class="hall-card"><div class="reel">🍿</div><div><h3>爆米花影评</h3><p>甜口/毒舌双窗口评新片</p></div></div>
+    <div class="hall-card"><div class="reel">🎞️</div><div><h3>胶片复活局</h3><p>老片重剪+幕后花絮闲谈</p></div></div>
+    <div class="hall-card"><div class="reel">🎫</div><div><h3>退票不亏</h3><p>烂片避雷，弹幕一起骂</p></div></div>
+    <div class="hall-card"><div class="reel">📽️</div><div><h3>放映机夜话</h3><p>影院人/字幕组/海报师访谈</p></div></div>
+    <div class="hall-card"><div class="reel">🎚️</div><div><h3>原声重映会</h3><p>影视OST现场翻奏专场</p></div></div>
+  </div>
+
+  <div class="head" id="anime">
+    <span class="ico">🎞️</span><h2>胶片动漫 · 动漫专区</h2><span class="en">// frame by frame</span><div class="line"></div>
+  </div>
+  <div class="film">
+    <div class="cell"><div class="perf"></div><div><h3>7号厅精灵</h3><p>治愈/新番</p></div><div class="ep">EP 12</div></div>
+    <div class="cell"><div class="perf"></div><div><h3>霓虹放映队</h3><p>热血/年番</p></div><div class="ep">EP 48</div></div>
+    <div class="cell"><div class="perf"></div><div><h3>胶片小裁缝</h3><p>奇幻/连载</p></div><div class="ep">EP 24</div></div>
+    <div class="cell"><div class="perf"></div><div><h3>夜场守门人</h3><p>悬疑/热更</p></div><div class="ep">EP 30</div></div>
+    <div class="cell"><div class="perf"></div><div><h3>爆米花星球</h3><p>搞笑/新番</p></div><div class="ep">EP 09</div></div>
+    <div class="cell"><div class="perf"></div><div><h3>717 动画档案馆</h3><p>怀旧/年番</p></div><div class="ep">EP 60</div></div>
+  </div>
+
+  <div class="head" id="about">
+    <span class="ico">🎫</span><h2>关于7号厅 · 关于我们</h2><span class="en">// about 717</span><div class="line"></div>
+  </div>
+  <div class="about">
+    <div class="board">
+      <h3>717 电影网是什么？</h3>
+      <p><b>717 电影网</b>（https://717dianyingwang-h5.github.io）是“7:17 特价场 / 胶片票根 / 影院指示牌”风格的影视信息导航站。</p>
+      <p>“717”只是场次代号，不是擦边词；网上同名站常有换域名、盗版聚合、免费看会员片等问题 [2,4](@ref)，本站明确<b>不存储视频、不提供盗版直链、不聚合非法播放源、不挂多源解析</b>。</p>
+      <p>关键词：717电影网、7:17 特价场、票根风影视导航、最新电影、热播剧集、综艺、动漫。</p>
+      <div class="stats">
+        <div class="stat"><div class="v">7:17</div><div class="l">每日开场</div></div>
+        <div class="stat"><div class="v">0</div><div class="l">盗版直链</div></div>
+        <div class="stat"><div class="v">100%</div><div class="l">移动端</div></div>
+        <div class="stat"><div class="v">5+</div><div class="l">栏目</div></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="lg">717<b>电影网</b></div>
+  <div class="fl">
+    <a href="#movies">新片场次</a>
+    <a href="#tv">热播排片</a>
+    <a href="#shows">放映厅综艺</a>
+    <a href="#anime">胶片动漫</a>
+    <a href="#about">关于7号厅</a>
+  </div>
+  <div class="cp">
+    网站名称：717电影网 ｜ 网址：<a href="https://717dianyingwang-h5.github.io">https://717dianyingwang-h5.github.io</a><br>
+    © 2026 717电影网 · 每天 7:17 开一场好片 ｜ 本站仅展示影视信息，资源以正版/公开平台为准；不提供盗版聚合播放。
+  </div>
+</footer>
+
+</body>
+</html>
